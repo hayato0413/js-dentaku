@@ -9,7 +9,7 @@
         document.dentaku.myLine.value = myInput;
       }
     } else if (myData == '0') {
-      if (myInput.length-1 !== '0') {
+      if (myInput.substr(-1) !== '0') {
         myInput += myData;
         myFlg = 0;
         document.dentaku.myLine.value = myInput;
