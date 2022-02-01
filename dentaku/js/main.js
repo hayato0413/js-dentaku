@@ -23,7 +23,7 @@
     }
     if (mySign == '=' && myFlg == 0){
       myTotal = eval(myInput);
-      myInput = myTotal;
+      myInput = String(myTotal);
       myFlg = 0;
       document.dentaku.myLine.value = myTotal;
     }
