@@ -21,7 +21,7 @@
       document.dentaku.myLine.value = myInput;
       myFlg = 1;
     }
-    if (mySign == '='){
+    if (mySign == '=' && myFlg == 0){
       myTotal = eval(myInput);
       myInput = myTotal;
       myFlg = 0;
