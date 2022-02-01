@@ -1,14 +1,20 @@
-　let myTotal = 0;
+  let myTotal = 0;
   let myInput = "";
   let myFlg = 1;
   
   function myValue(myData) {
-    if (myData == 0 || myData == '00' || myData == '.') {
+    if (myData == '00' || myData == '.') {
       if (myTotal !== 0 || myFlg == 0) {
         myInput += myData;
         document.dentaku.myLine.value = myInput;
       }
-    } else {
+    } else if (myData == '0') {
+      if (myInput.length-1 !== '0') {
+        myInput += myData;
+        myFlg = 0;
+        document.dentaku.myLine.value = myInput;
+      }
+    }else {
       myInput += myData;
       myFlg = 0;
       document.dentaku.myLine.value = myInput;
